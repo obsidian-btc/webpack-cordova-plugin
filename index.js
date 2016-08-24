@@ -90,8 +90,8 @@ WebpackCordovaPlugin.prototype.apply  = function(compiler){
       }
       try {
         replace({
-          regex: /version=\"([0-9]+\.?){1,3}\"/,
-          replacement: "version=\""+version+"\"",
+          regex: /version="[0-9a-zA-Z.-]+"/,
+          replacement: 'version="'+version+'"',
           paths: [config],
           silent: true
         });
